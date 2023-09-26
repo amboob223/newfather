@@ -8,7 +8,22 @@
 </head>
 
 <body>
+    <form action="http://localhost:5000/shelf" method="post">
+        <label for="name">Name
+            <input id="name" type="text">
+        </label>
+        <label for="birthdate">Birthdate
+            <input id="birthdate" type="text">
+        </label>
 
+        <label for="pics">pics
+            <input id="pics" name="pics" type="file" accept=".jpg, .jpeg, .png, .mp3, .mp4">
+        </label>
+
+    </form>
+    <button id="sbtn">submit </button>
+
+    <script src="./shelf.js"></script>
 </body>
 
 </html>

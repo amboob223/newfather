@@ -8,15 +8,30 @@
 </head>
 
 <body>
-    <form action="http://localhost:5000/health">
-        <input id="doctorName" type="text">
-        <input id="doctorNum" type="text">
-        <input id="appointments" type="text">
-        <input id="feedtimes" type="text">
-        <input id="diaperCount" type="text">
+    <form action="http://localhost:5000/health" method="post">
+        <label for="doctorName">doctorName
+            <input id="doctorName" type="text" name="doctorName">
+        </label>
+        <label for="doctorNum">docNumber
+            <input id="doctorNum" type="text" name="doctorNum">
+        </label>
+
+        <label for="appointments">appointments
+            <input id="appointments" type="text" name="appointments">
+        </label>
+        <label for="feedtimes">
+            feedtimes
+            <input id="feedtimes" type="text" name="feedtimes">
+        </label>
+        <label for="diaperCount">
+            diaper count
+            <input id="diaperCount" type="text" name="diaperCount">
+        </label>
+
     </form>
     <button id="hbtn">submit </button>
 
+    <script src="./health.js"></script>
 </body>
 
 </html>
