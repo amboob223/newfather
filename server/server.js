@@ -8,7 +8,7 @@ const path = require("path");
 // middleware 
 app.use(cors());
 app.use(express.json());
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //when we using multer middleware we hot to use express rto set the view engine to ejs embedded javascript 
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -22,6 +22,18 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage
 });
+
+app.get("/health", async (req, res) => {
+    try {
+        const data = await pool.query(
+            "SELECT * FROM health;"
+        );
+        res.json(data.rows)
+    } catch (error) {
+        console.log(error)
+    }
+
+})
 
 app.post("/health", async (req, res) => {
     const { doctorName, doctorNum, appointments, feedtimes, diaperCount } = req.body;
@@ -47,7 +59,7 @@ app.post("/shelf", upload.single("pics"), async (req, res) => {
 
     // Check if req.file exists before accessing its properties
     if (req.file) {
-        const picFilename = req.file.filename;
+        const picFilename = req.file.filename; // dont forget to do the filename here 
         const newData = await pool.query(
             "INSERT INTO shelf(name, birthdate, pic) VALUES ($1, $2, $3) RETURNING *",
             [namee, birthdate, picFilename]

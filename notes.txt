@@ -1,12 +1,23 @@
-    //the health
-//we got to have a breast feeding alarm 
-// all the doctors  numbers and shot records
-// next appointment alarm 
+// okay we gon set it up like this 
+    health
+        -we have a button to take the initial time annd then return a list of shedheule times to feed 
+        - we log the daily diaper count
+        - we have a button to display the appointments her name and nubmber
+         and see the average on a chart 
+        
 
-// the wealth section 
-    // we taliking about invesments that will pop when she get older 
-    // her stocks and her crypto and her savings 
+    wealth 
+        - have a get button for all the info 
+        - we track the total of all investments 
+        - have an array off all investments and be able to dlete from the total too
+        - make a text area for the finicial plan 
 
-// the shelf
-    // have her pictures
-    // 
+    shelf 
+        - have a get button that pull ups all the info 
+
+
+    index this part we need a get quote part and a search for child component like the other append
+    -after we finish this we need to make an auth part 
+
+
+    okay we need the feedtimes to inctrease by 2000 and go into an array of times an we put in a new array 
