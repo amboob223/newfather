@@ -23,3 +23,10 @@ CREATE TABLE shelf(
     birthdate INTEGER,
     pic BYTEA
 );
+
+ALTER TABLE health
+ALTER COLUMN doctorNum TYPE VARCHAR(255);
+
+
+ALTER TABLE health
+ALTER COLUMN feedtimes TYPE VARCHAR(255) USING feedtimes[1]::VARCHAR;

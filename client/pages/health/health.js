@@ -60,35 +60,34 @@ getFeed.addEventListener("click", async (event) => {
         const json = await data.json()
 
         json.map(item => {
-            console.log(item)
+
             rows.innerHTML = ""
 
-            const num = item.feedtimes // this is an array but we treating this as a number 
+            const num = item.feedtimes[2] // this is an array but we treating this as a number 
+            console.log(num)
 
 
-            num.map(element => {
+            nn = parseInt(num) // this is the shit in the array
+            console.log(typeof (nn))
+            const times = adder(nn)//we need this method to return an array 
 
-                const nn = parseInt(element) // this is the shit in the array
-
-                const times = adder(nn)//we need this method to return an array 
-
-                for (let i = 0; i < times.length; i++) {
+            for (let i = 0; i < times.length; i++) {
 
 
-                    const data = document.createElement("td");
+                const data = document.createElement("td");
 
-                    data.innerHTML = times[i]
+                data.innerHTML = times[i]
 
-                    rows.appendChild(data)
-                    table.appendChild(rows)
+                rows.appendChild(data)
+                table.appendChild(rows)
 
-                }
+            }
 
 
 
-            })
+        })
 
-        });
+
 
 
 
@@ -104,7 +103,7 @@ function adder(num) {
     for (let i = 0; i < 12; i++) {
         result += 2;
         result %= 24; // Use modulo to keep the result within the range 0-23
-        keep.push(result);
+        keep.push(result + ":00");
     }
 
     return keep;
