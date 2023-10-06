@@ -20,9 +20,12 @@ CREATE TABLE wealth(
 CREATE TABLE shelf(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    birthdate INTEGER,
-    pic BYTEA
+    birthdate VARCHAR(255),
+    pic VARCHAR(255),
 );
+
+ALTER TABLE shelf 
+ALTER COLUMN birthdate TYPE VARCHAR(255);
 
 ALTER TABLE health
 ALTER COLUMN doctorNum TYPE VARCHAR(255);

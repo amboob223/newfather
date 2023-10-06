@@ -61,6 +61,8 @@ getFeed.addEventListener("click", async (event) => {
 
         json.map(item => {
 
+            console.log(item.doctorname)
+            dname.innerHTML = `${item.doctorname}`
             rows.innerHTML = ""
 
             const num = item.feedtimes[2] // this is an array but we treating this as a number 
@@ -74,9 +76,9 @@ getFeed.addEventListener("click", async (event) => {
             for (let i = 0; i < times.length; i++) {
 
 
-                const data = document.createElement("td");
+                const data = document.createElement("tr");
 
-                data.innerHTML = times[i]
+                data.innerHTML = "feed at : " + times[i]
 
                 rows.appendChild(data)
                 table.appendChild(rows)

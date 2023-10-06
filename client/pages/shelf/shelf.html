@@ -10,18 +10,24 @@
 <body>
     <form action="http://localhost:5000/shelf" method="post">
         <label for="name">Name
-            <input id="name" type="text">
+            <input id="name" name="namee" type="text">
         </label>
         <label for="birthdate">Birthdate
-            <input id="birthdate" type="text">
+            <input name="birthdate" id="birthdate" type="text">
         </label>
 
         <label for="pics">pics
-            <input id="pics" name="pics" type="file" accept=".jpg, .jpeg, .png, .mp3, .mp4">
+            <input id="pics" name="pics" type="file">
         </label>
 
     </form>
     <button id="sbtn">submit </button>
+    <button id="getS">shelf</button>
+    <div class="outC">
+        <div class="inC">
+            <img src="" alt="" id="pic" height="500px" width="500px">
+        </div>
+    </div>
 
     <script src="./shelf.js"></script>
 </body>

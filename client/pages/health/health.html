@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -19,10 +20,9 @@
         <label for="appointments">appointments
             <input id="appointments" type="text" name="appointments">
         </label>
-        <label for="feedtimes">
-            feedtimes
-            <input id="feedtimes" type="text" name="feedtimes">
-        </label>
+        <label for="feedtimes">Feedtime (rounded to nearest military number):</label>
+        <input id="feedtimes" type="text" name="feedtimes">
+
         <label for="diaperCount">
             diaper count
             <input id="diaperCount" type="text" name="diaperCount">
@@ -42,17 +42,10 @@
     <div class="outC">
         <div class="inC">
             <div class="container">
+                <h1 id="dName"></h1>
                 <table id="table">
                     <tr id="row">
-                        <td>
-                            <h1 id="dName"></h1>
-                        </td>
-                        <td>
-                            <h1 id="dNumber"></h1>
-                        </td>
-                        <td>
-                            <p id="feed"></p>
-                        </td>
+
                     </tr>
                 </table>
             </div>
