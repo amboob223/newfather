@@ -4,6 +4,7 @@ const cors = require("cors");
 const pool = require("./db");
 const multer = require("multer");
 const path = require("path");
+const bcrypt = require('bcrypt');
 
 // Middleware
 app.use(cors());
@@ -26,6 +27,52 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage
 });
+
+app.post("/signup", async (req, res) => {
+    try {
+        const { email, password } = req.body
+
+        const saltRounds = 10
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+        //construct a query
+
+        const query = "INSERT INTO pass(email,password) VALUES ($1,$2) RETURNING * ";
+        const values = [email, hashedPassword];
+
+        const result = await pool.query(query, values)
+        res.json(result.rows[0])
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({ error: "internal service error" })
+    }
+})
+
+app.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body
+        const query = "SELECT password FROM pass WHERE email = $1"
+        const values = [email]
+
+        const result = await pool.query(query, values);
+
+        if (result.rows.length === 1) {
+            const hashedPassword = result.rows[0].password;
+            const passwordMatch = await bcrypt.compare(password, hashedPassword)
+
+            if (passwordMatch) {
+                res.status(200).json({ message: "login succesful" })
+            } else {
+                res.status(401).json({ error: "invalid" })
+            }
+
+        }
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ error: "internal service error" })
+    }
+})
+
 
 // Health Routes
 app.get("/health", async (req, res) => {
