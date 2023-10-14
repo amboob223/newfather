@@ -1,0 +1,193 @@
+ul>li {
+    display: inline;
+
+}
+
+nav {
+    justify-content: center;
+    display: flex;
+}
+
+header {
+    margin-top: 5%;
+}
+
+.mainC {
+    display: flex;
+    justify-content: center;
+}
+
+.OutC>.inC {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.outC>.inC {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+/* Add these CSS rules to your index.css file */
+
+/* Style for form elements */
+form {
+    display: flex;
+    flex-direction: row;
+    /* Display form elements in a row */
+    align-items: center;
+    /* Center vertically */
+}
+
+form label {
+    margin-right: 10px;
+    /* Add space between labels and input fields */
+}
+
+/* Style for form buttons */
+form button {
+    margin-top: 10px;
+    /* Add space below the buttons */
+}
+
+/* Add media query for responsiveness (optional) */
+@media screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+        /* Stack form elements on small screens */
+    }
+}
+
+/* Add this to your index.css file */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Page Specific Styles */
+#message {
+    font-weight: bold;
+    margin-top: 20px;
+    color: green;
+}
+
+/* Second Page Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Add this to your index.css file */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Page Specific Styles */
+.mainC {
+    text-align: center;
+}
+
+.mainC h1 {
+    font-size: 36px;
+}
+
+.mainC p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Button Styles */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Additional Styling can be added to suit your design preferences */
+/* Additional Styling can be added to suit your design preferences */

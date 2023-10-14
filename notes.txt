@@ -21,3 +21,14 @@
 
 
     okay we need the feedtimes to inctrease by 2000 and go into an array of times an we put in a new array 
+
+    we should have made it whwere it tracks daily progress right now the data just collects cross refrence data not time series data 
+
+    im thinking for the quote part we have a collection of data and a random number and when the person click on that button they get a random selection 
+    before the slection was based off intrest but we forgot to include that in our data and service request so for now it will be purley random quotes and activities 
+
+    maybe we get the data from an external page and the quotes too once we do this we can design and make a logo and deploy this app for the fathers
+    the next app will incorpiorate some auth in it 
+    
+
+    https://fingerprintsbylivescan.com/products/nmls-fingerprinting-kit

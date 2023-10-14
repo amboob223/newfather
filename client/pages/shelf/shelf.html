@@ -5,29 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Users/playabook/Desktop/sept/pop/client/index.css">
+
 </head>
 
 <body>
-    <form action="http://localhost:5000/shelf" method="post">
-        <label for="name">Name
-            <input id="name" name="namee" type="text">
-        </label>
-        <label for="birthdate">Birthdate
-            <input name="birthdate" id="birthdate" type="text">
-        </label>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="file:///Users/playabook/Desktop/sept/pop/client/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../health/health.html">Health</a>
+                </li>
+                <li>
+                    <a href="../shelf/shelf.html">Shelf</a>
+                </li>
+                <li>
+                    <a href="../wealth/wealth.html">Wealth</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 
-        <label for="pics">pics
-            <input id="pics" name="pics" type="file">
-        </label>
+        <form action="http://localhost:5000/shelf" method="post">
+            <label for="name">Name
+                <input id="name" name="namee" type="text">
+            </label>
+            <label for="birthdate">Birthdate
+                <input name="birthdate" id="birthdate" type="text">
+            </label>
 
-    </form>
-    <button id="sbtn">submit </button>
-    <button id="getS">shelf</button>
-    <div class="outC">
-        <div class="inC">
-            <img src="" alt="" id="pic" height="500px" width="500px">
+            <label for="pics">pics
+                <input id="pics" name="pics" type="file">
+            </label>
+
+        </form>
+        <button id="sbtn">submit </button>
+        <button id="getS">shelf</button>
+        <div class="outC">
+            <div class="inC">
+                <h1 id="sname"></h1>
+                <h3 id="sbd"></h3>
+                <img style="display: none;" src="" alt="" id="pic" height="500px" width="500px">
+            </div>
         </div>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
 
     <script src="./shelf.js"></script>
 </body>

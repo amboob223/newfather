@@ -1,15 +1,16 @@
 const namee = document.getElementById("name");
 const birthdate = document.getElementById("birthdate");
 const pics = document.getElementById("pics");
-
+const pic = document.getElementById("pic");
 const sbtn = document.getElementById("sbtn");
 
 sbtn.addEventListener("click", async () => {
+
     try {
         const body = new FormData();
         body.append("namee", namee.value);
         body.append("birthdate", birthdate.value)
-        body.append("pics", pics.files[0])
+        body.append("pics", pics.files[0])//.files gives an array and we getting the first element from sdaid arrtay
 
         const response = await fetch("http://localhost:5000/shelf", {
             method: "POST",
@@ -22,6 +23,8 @@ sbtn.addEventListener("click", async () => {
 });
 
 const getShelf = document.getElementById("getS");
+const shelfname = document.getElementById("sname");
+const sBirth = document.getElementById("sbd");
 
 
 
@@ -29,10 +32,13 @@ getShelf.addEventListener("click", async (event) => {
     event.preventDefault();
 
     try {
+        if (pic.style.display == "none") {
+            pic.style.display = "block"
+        }
         const response = await fetch("http://localhost:5000/shelf");
         const contentType = response.headers.get("content-type");
         console.log(response);
-
+        console.log(contentType);
         if (contentType && contentType.includes("application/json")) {
             const jsonData = await response.json();
             console.log(jsonData)
@@ -41,6 +47,9 @@ getShelf.addEventListener("click", async (event) => {
                 const pic = document.getElementById("pic");
                 console.log(pic)
                 console.log(element.pic)
+                shelfname.innerHTML = `${element.name}`
+                sBirth.innerHTML = `${element.birthdate}`
+
                 pic.src = `/Users/playabook/Desktop/sept/pop/server/images/${element.pic.filename}`
 
             });

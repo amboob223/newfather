@@ -62,7 +62,8 @@ getFeed.addEventListener("click", async (event) => {
         json.map(item => {
 
             console.log(item.doctorname)
-            dname.innerHTML = `${item.doctorname}`
+            dname.innerHTML = `${item.doctorname}` // these blue letter names come from the names in the database 
+            dNum.innerHTML = `${item.doctornum}`
             rows.innerHTML = ""
 
             const num = item.feedtimes[2] // this is an array but we treating this as a number 

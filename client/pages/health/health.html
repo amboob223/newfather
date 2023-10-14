@@ -5,10 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/Users/playabook/Desktop/sept/pop/client/index.css">
+
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="file:///Users/playabook/Desktop/sept/pop/client/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../health/health.html">Health</a>
+                </li>
+                <li>
+                    <a href="../shelf/shelf.html">Shelf</a>
+                </li>
+                <li>
+                    <a href="../wealth/wealth.html">Wealth</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <form action="http://localhost:5000/health" method="post">
         <label for="doctorName">doctorName
             <input id="doctorName" type="text" name="doctorName">
@@ -43,6 +62,7 @@
         <div class="inC">
             <div class="container">
                 <h1 id="dName"></h1>
+                <p id="dNumber"></p>
                 <table id="table">
                     <tr id="row">
 
