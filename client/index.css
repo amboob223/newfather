@@ -1,3 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-indent: 3%;
+}
+
 ul>li {
     display: inline;
 
@@ -9,7 +17,7 @@ nav {
 }
 
 header {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .mainC {
@@ -77,8 +85,15 @@ header {
     padding: 20px;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 main {
     padding: 20px;
+    margin: 5%;
+    margin-top: 2%;
 }
 
 /* Form Styles */
