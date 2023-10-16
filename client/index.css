@@ -12,7 +12,7 @@ ul>li {
 }
 
 nav {
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
 }
 
@@ -51,10 +51,16 @@ form {
     /* Center vertically */
 }
 
+.scar {
+    display: flex;
+    flex-direction: row;
+}
+
 form label {
     margin-right: 10px;
     /* Add space between labels and input fields */
 }
+
 
 /* Style for form buttons */
 form button {
@@ -203,6 +209,8 @@ button {
 button:hover {
     background-color: #555;
 }
+
+
 
 /* Additional Styling can be added to suit your design preferences */
 /* Additional Styling can be added to suit your design preferences */
