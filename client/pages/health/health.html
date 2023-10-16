@@ -28,46 +28,54 @@
             </ul>
         </nav>
     </header>
-    <form action="http://localhost:5000/health" method="post">
-        <label for="doctorName">doctorName
-            <input id="doctorName" type="text" name="doctorName">
-        </label>
-        <label for="doctorNum">docNumber
-            <input id="doctorNum" type="text" name="doctorNum">
-        </label>
+    <div>
+        <div class="OutC">
+            <div class="inC">
 
-        <label for="appointments">appointments
-            <input id="appointments" type="text" name="appointments">
-        </label>
-        <label for="feedtimes">Feedtime (rounded to nearest military number):</label>
-        <input id="feedtimes" type="text" name="feedtimes">
+                <form action="http://localhost:5000/health" method="post">
+                    <label for="doctorName">doctorName
+                        <input id="doctorName" type="text" name="doctorName">
+                    </label>
+                    <label for="doctorNum">docNumber
+                        <input id="doctorNum" type="text" name="doctorNum">
+                    </label>
 
-        <label for="diaperCount">
-            diaper count
-            <input id="diaperCount" type="text" name="diaperCount">
-        </label>
+                    <label for="appointments">appointments
+                        <input id="appointments" type="text" name="appointments">
+                    </label>
+                    <label for="feedtimes">Feedtime (rounded to nearest military number):</label>
+                    <input id="feedtimes" type="text" name="feedtimes">
 
-    </form>
-    <button id="hbtn">submit </button>
+                    <label for="diaperCount">
+                        diaper count
+                        <input id="diaperCount" type="text" name="diaperCount">
+                    </label>
+                    <button id="hbtn">submit </button>
+                    <div class="outC">
+                        <div class="inC">
+                            <button class="getfeed">
+                                get health
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
-    <div class="outC">
-        <div class="inC">
-            <button class="getfeed">
-                get health
-            </button>
-        </div>
-    </div>
 
-    <div class="outC">
-        <div class="inC">
-            <div class="container">
-                <h1 id="dName"></h1>
-                <p id="dNumber"></p>
-                <table id="table">
-                    <tr id="row">
 
-                    </tr>
-                </table>
+
+                <div class="outC">
+                    <div class="inC">
+                        <div class="container">
+                            <h1 id="dName"></h1>
+                            <p id="dNumber"></p>
+                            <table id="table">
+                                <tr id="row">
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

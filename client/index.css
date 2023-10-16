@@ -45,7 +45,7 @@ header {
 /* Style for form elements */
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* Display form elements in a row */
     align-items: center;
     /* Center vertically */

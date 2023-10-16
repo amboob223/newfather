@@ -32,3 +32,7 @@
     
 
     https://fingerprintsbylivescan.com/products/nmls-fingerprinting-kit
+
+    on this app the last things i need to do id to be able to render wealth info to the page and I still might but a graph in there
+
+    as far as us though the next thing im doing is api the react native then soliidty
