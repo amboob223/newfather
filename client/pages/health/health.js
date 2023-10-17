@@ -10,7 +10,7 @@ const doctorNum = document.getElementById("doctorNum");
 const appointments = document.getElementById("appointments");
 const feedtimes = document.getElementById("feedtimes");
 const diaperCount = document.getElementById("diaperCount");
-
+// all we had to do was fix the body request s
 //button 
 const hbtn = document.getElementById("hbtn");
 
@@ -20,14 +20,16 @@ hbtn.addEventListener("click", async (event) => {
         event.preventDefault()
         // we got to make an array tuype for the sql data
         const apar = [appointments.value]
-        const fear = [feedtimes.value]
+        const fear = feedtimes.value
+
+
 
 
         const body = {
             doctorName: doctorName.value,
             doctorNum: doctorNum.value,
             appointments: apar,
-            feedtimes: fear,
+            feedtimes: feedtimes.value,
             diaperCount: diaperCount.value
         }
 
@@ -53,7 +55,7 @@ getFeed.addEventListener("click", async (event) => {
         const feed = document.getElementById("feed");
         const table = document.getElementById("table");
         const rows = document.getElementById("row");
-
+        const feedtimes = document.getElementById("feedtimes");
 
 
         const data = await fetch("http://localhost:5000/health")
@@ -61,19 +63,19 @@ getFeed.addEventListener("click", async (event) => {
 
         json.map(item => {
 
-            console.log(item.doctorname)
+            console.log(item)
             dname.innerHTML = `${item.doctorname}` // these blue letter names come from the names in the database 
             dNum.innerHTML = `${item.doctornum}`
             rows.innerHTML = ""
 
-            const num = item.feedtimes[2] // this is an array but we treating this as a number 
-            console.log(num)
+            const num = item.feedtimes
 
+            console.log(parseInt(num))
 
             nn = parseInt(num) // this is the shit in the array
-            console.log(typeof (nn))
-            const times = adder(nn)//we need this method to return an array 
 
+            const times = adder(nn)//we need this method to return an array 
+            console.log(times)
             for (let i = 0; i < times.length; i++) {
 
 

@@ -42,23 +42,41 @@
             </div>
         </nav>
     </header>
-    <form action="http://localhost:5000/wealth" method="post">
-        <label for="cryptoName">cryptoName
-            <input id="cryptoName" name="cryptoName" type="text">
-        </label>
-        <label for="cryptoPrice">cryptoPrice
-            <input id="cryptoPrice" name="cryptoPrice" type="text">
-        </label>
 
-        <label for="stockName">stockName
-            <input id="stockName" name="stockName" type="text">
-        </label>
-        <label for="stockPrice">stockPrices
-            <input id="stockPrice" name="stockPrice" type="text">
-        </label>
-    </form>
-    <button id="wbtn">submit </button>
 
+
+
+
+
+    <main class="do">
+        <div>
+            <form action="http://localhost:5000/wealth" method="post">
+                <label for="cryptoName">cryptoName
+                    <input id="cryptoName" name="cryptoName" type="text">
+                </label>
+                <label for="cryptoPrice">cryptoPrice
+                    <input id="cryptoPrice" name="cryptoPrice" type="text">
+                </label>
+
+                <label for="stockName">stockName
+                    <input id="stockName" name="stockName" type="text">
+                </label>
+                <label for="stockPrice">stockPrices
+                    <input id="stockPrice" name="stockPrice" type="text">
+                </label>
+            </form>
+            <button id="wbtn">submit </button>
+
+            <button id="getw">get wealth</button>
+        </div>
+
+
+        <div id="tide">
+
+        </div>
+
+
+    </main>
     <script src="./wealth.js"></script>
 </body>
 

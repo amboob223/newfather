@@ -105,6 +105,28 @@ app.post("/wealth", async (req, res) => {
     res.json(newData.rows[0]);
 });
 
+app.get("/wealth", async (req, res) => {
+
+    try {
+        const data = await pool.query(
+            "SELECT * FROM wealth;"
+        );
+        res.json(data.rows)
+    } catch (error) {
+        console.log(error)
+    }
+});
+
+app.get("/health", async (req, res) => {
+    try {
+        const data = await pool.query("SELECT * FROM health;");
+        res.json(data.rows);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 // Shelf Routes
 app.get("/shelf", async (req, res) => {
     try {

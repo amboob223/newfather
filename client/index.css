@@ -61,6 +61,11 @@ form label {
     /* Add space between labels and input fields */
 }
 
+.do {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* Style for form buttons */
 form button {
