@@ -52,3 +52,14 @@
         -you gon commit a felony lol
             i just wrote all this down for the next time you decide to keep contact or help family you should have left long ago
             -dont forget your biggest fan a be your biggest hater - 
+
+    -new apps I made 
+        - gdp calculator with the graph 
+        - gas bud with the url and fetch http 
+        - baba with the auth 
+        - we need an app with the
+             api call and
+             auth and and 
+             url trick and  
+             graph 
+        
