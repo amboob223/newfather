@@ -37,7 +37,11 @@
 
     as far as us though the next thing im doing is api the react native then soliidty
 
+
+
     shit this hoe said
+        - its gon be another dumba situation something like that 
+        -little house on the prarie
         -comet head
         - bitch keep praying in west africa, 
         -child when she turn 6 gon ask her dad to tell her a story etc something bout magic
@@ -45,6 +49,7 @@
         -how we go from fighting to shooting
         -silverspoon
         -pillow fight 
+        -tryna save everybody 
         -went to college and had a baby but he thuggin jcole
         - i dont fuck with none of yall niggas 
         -you think yuor daughter better than mine etc?
@@ -62,4 +67,12 @@
              auth and and 
              url trick and  
              graph 
+                -ill  make this the club app
+                - and word bobble app and do them resumes 
+                    -web developer
+                    - data analyst
+                    - software engineer
+
+            - 
         
+        -things I will come back and fix on the app on one of my code shatpening days is to make the feedtime feature encode so if you put 8:00 pm it will treat like 20 and will print in pm also add a graph for the diaper count and graph the total amount of assets in the wealth part with an add and subtract capability

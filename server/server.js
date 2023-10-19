@@ -135,7 +135,7 @@ app.get("/shelf", async (req, res) => {
             ...row,
             pic: {
                 filename: row.pic, // Include the original filename
-                data: row.pic.toString("base64")
+
             }
         }));
         res.json(rowsWithImages);
@@ -150,7 +150,7 @@ app.post("/shelf", upload.single("pics"), async (req, res) => {
     const { namee, birthdate } = req.body;
 
     // Check if req.file exists before accessing its properties
-    if (req.file) {
+    if (req.file.filename) {
         const picFilename = req.file.filename;
 
         // Insert data into the database
@@ -161,9 +161,11 @@ app.post("/shelf", upload.single("pics"), async (req, res) => {
 
         // Send the response with the inserted data as JSON
         res.json(newData.rows[0]);
+        console.log(newData.rows)
     } else {
         // Send a 400 Bad Request response if no file was uploaded
         res.status(400).json({ error: 'No file uploaded' });
+        console(res.status(400))
     }
 });
 

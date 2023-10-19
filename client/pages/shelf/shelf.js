@@ -9,16 +9,16 @@ sbtn.addEventListener("click", async () => {
     try {
         const body = new FormData();
         body.append("namee", namee.value);
-        body.append("birthdate", birthdate.value)
-        body.append("pics", pics.files[0])//.files gives an array and we getting the first element from sdaid arrtay
+        body.append("birthdate", birthdate.value);
+        body.append("pics", pics.files[0]); // Use 'pics.files' instead of 'pics.file'
 
         const response = await fetch("http://localhost:5000/shelf", {
             method: "POST",
             body: body
         });
-        console.log("yo")
+        console.log("yo");
     } catch (error) {
-        console.log("cry")
+        console.log("cry");
     }
 });
 
@@ -26,14 +26,12 @@ const getShelf = document.getElementById("getS");
 const shelfname = document.getElementById("sname");
 const sBirth = document.getElementById("sbd");
 
-
-
 getShelf.addEventListener("click", async (event) => {
     event.preventDefault();
 
     try {
         if (pic.style.display == "none") {
-            pic.style.display = "block"
+            pic.style.display = "block";
         }
         const response = await fetch("http://localhost:5000/shelf");
         const contentType = response.headers.get("content-type");
@@ -41,17 +39,15 @@ getShelf.addEventListener("click", async (event) => {
         console.log(contentType);
         if (contentType && contentType.includes("application/json")) {
             const jsonData = await response.json();
-            console.log(jsonData)
+            console.log(jsonData);
 
             jsonData.forEach(element => {
-                const pic = document.getElementById("pic");
-                console.log(pic)
-                console.log(element.pic)
-                shelfname.innerHTML = `${element.name}`
-                sBirth.innerHTML = `${element.birthdate}`
+                console.log(pic);
+                console.log(element.pic);
+                shelfname.innerHTML = `${element.name}`;
+                sBirth.innerHTML = `${element.birthdate}`;
 
-                pic.src = `/Users/playabook/Desktop/sept/pop/server/images/${element.pic.filename}`
-
+                pic.src = `/Users/playabook/Desktop/sept/pop/server/images/${element.pic.filename}`;
             });
         } else {
             const textData = await response.text();
