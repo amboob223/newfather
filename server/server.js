@@ -134,7 +134,7 @@ app.get("/shelf", async (req, res) => {
         const rowsWithImages = data.rows.map(row => ({
             ...row,
             pic: {
-                filename: row.pic, // Include the original filename
+                filename: row.pic // Include the original filename
 
             }
         }));
