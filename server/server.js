@@ -151,7 +151,7 @@ app.post("/shelf", upload.single("pics"), async (req, res) => {
 
     // Check if req.file exists before accessing its properties
     if (req.file) {
-        const picFilename = req.file.filename;
+        const picFilename = req.file;
 
         // Insert data into the database
         const newData = await pool.query(
