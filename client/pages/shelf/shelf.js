@@ -47,7 +47,7 @@ getShelf.addEventListener("click", async (event) => {
                 shelfname.innerHTML = `${element.name}`;
                 sBirth.innerHTML = `${element.birthdate}`;
 
-                pic.src = `/Users/playabook/Desktop/sept/pop/server/images/${element.pic.filename}`;
+                pic.src = `../../../server/images/${element.pic.filename}`;
             });
         } else {
             const textData = await response.text();
